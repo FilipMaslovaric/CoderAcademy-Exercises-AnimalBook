@@ -1,11 +1,18 @@
-<div>
-  <h1>AnimalBook</h1>
+<% if user_signed_in? %>
+<div class="has-text-info has-text-centered">
+  Signed in as <%= current_user.email %>
 </div>
-
-<div>
-  <p>
-    <% if user_signed_in? %>
-      Signed in as <%= current_user.email %>
-    <% end %>
-  </p>
+<% end %>
+<div class="hero is-fullheight">
+  <div class="section is-flex">
+    <div class="container image">
+      <% if current_user.has_role? :dog %>
+      <%= image_tag("https://i.ytimg.com/vi/VlY16ZDyCp4/hqdefault.jpg") %>
+      <% elsif current_user.has_role? :cat %>
+      <%= image_tag("http://i1.kym-cdn.com/photos/images/newsfeed/001/088/637/c67.jpg") %>
+      <% elsif current_user.has_role? :bird %>
+      <%= image_tag("http://www.theluxuryspot.com/wp-content/uploads/2014/08/Screen-Shot-2014-08-25-at-4.12.29-PM.png") %>
+      <% end %>
+    </div>
+  </div>
 </div>

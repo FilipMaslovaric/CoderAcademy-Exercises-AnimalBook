@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CoderAcademyExercisesAnimalbook</title>
+    <title>AnimalBook</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/a5e5d34a8f.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
     <%= yield %>
+    </div>
   </body>
 </html>

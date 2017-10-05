@@ -1,0 +1,14 @@
+<div class="navbar is-transparent has-text-centered">
+  <div class="navbar-brand">
+    <div class="container has-text-primary is-size-4">AnimalBook</div>
+  </div>
+  <% unless current_page?('pages/sign_in') %>
+    <div class="container navbar-item">
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "button is-primary has-text-centered") %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path, class: "button is-primary has-text-centered")  %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
