@@ -1,1 +1,11 @@
+<div>
+  <h1>AnimalBook</h1>
+</div>
 
+<div>
+  <p>
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>
+    <% end %>
+  </p>
+</div>
