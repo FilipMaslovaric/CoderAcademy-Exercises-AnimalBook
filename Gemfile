@@ -29,7 +29,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use Devise for authentication and user generation
 gem 'devise'
+# Use rolify gem to create user roles
+gem "rolify"
+# Use bulma-rails gem for styling with Bulma CSS framework
 gem "bulma-rails", "~> 0.5.3"
 
 # Use Capistrano for deployment
